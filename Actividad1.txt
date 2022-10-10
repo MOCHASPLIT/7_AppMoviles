@@ -1,0 +1,14 @@
+/* Actividad 1 / Guerrero Zamora Welinton / 7mo "A" */
+fun main() {
+    val miPrimerDado = Dado(6)
+    println("El resultado de tu dado de ${miPrimerDado.numCaras} caras es: ${miPrimerDado.roll()}!")
+
+    val miSegundoDado = Dado(20)
+    println("El resultado de tu dado de ${miSegundoDado.numCaras} caras es: ${miSegundoDado.roll()}!")
+}
+
+class Dado (val numCaras: Int) {
+    fun roll(): Int {
+        return (1..numCaras).random()
+    }
+}

@@ -1,0 +1,21 @@
+/* Actividad 3 / Guerrero Zamora Welinton / 7mo "A" */
+fun main() {
+    val miPrimerDado = Lados(6)
+    val resultadoJuego = miPrimerDado.roll()
+    val numeroSuerte = 3
+
+    when (resultadoJuego) {
+        numeroSuerte -> println("¡Ganaste!")
+        1 -> println("¡Lo siento mucho! Sacaste un 1. ¡Inténtalo de nuevo!")
+        2 -> println("Lamentablemente, sacaste un 2. ¡Inténtalo de nuevo!")
+        4 -> println("Desafortunadamente, sacaste un 4. ¡Inténtalo de nuevo!")
+        5 -> println("¡No llores! Sacaste un 5. ¡Inténtalo de nuevo!")
+        6 -> println("¡Disculpas! Obtuviste un 6. ¡Inténtalo de nuevo!")
+   }
+}
+
+class Lados(val numSides: Int) {
+    fun roll(): Int {
+        return (1..numSides).random()
+    }
+}
